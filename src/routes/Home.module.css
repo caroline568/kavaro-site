@@ -207,12 +207,15 @@
 .projSec { padding: 96px 60px; background: var(--white); }
 .projGrid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   margin-top: 48px;
   max-width: 1280px;
   margin-left: auto;
   margin-right: auto;
+}
+@media (max-width: 1100px) {
+  .projGrid { grid-template-columns: repeat(2, 1fr); }
 }
 .projCard {
   background: var(--white);
@@ -243,6 +246,25 @@
 .projBlock p { font-size: 14px; color: var(--grey-dark); line-height: 1.7; font-weight: 300; }
 .projTools { display: flex; flex-wrap: wrap; gap: 6px; }
 .projTool { font-size: 11px; background: var(--grey-bg); color: var(--navy); padding: 4px 10px; letter-spacing: 0.4px; }
+.projLink { margin-top: 4px; }
+.projCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--navy);
+  background: transparent;
+  border: 1px solid var(--navy);
+  padding: 10px 18px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.projCta:hover {
+  background: var(--navy);
+  color: var(--white);
+}
 .projNote { margin-top: 32px; font-size: 12px; color: var(--grey-mid); font-style: italic; text-align: center; }
 
 /* ==========================================================
