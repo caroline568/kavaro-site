@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { projects } from "@/data/projects";
+import { projects, FEATURED_COUNT } from "@/data/projects";
 import styles from "./Work.module.css";
 
 export const Route = createFileRoute("/work")({
@@ -28,6 +29,10 @@ export const Route = createFileRoute("/work")({
 const CALENDLY_URL = import.meta.env.VITE_CALENDLY_URL || "https://calendly.com/hello-kavaro";
 
 function Work() {
+  const [showAll, setShowAll] = useState(false);
+  const visibleProjects = showAll ? projects : projects.slice(0, FEATURED_COUNT);
+  const hasMore = !showAll && projects.length > FEATURED_COUNT;
+
   return (
     <main>
       {/* 1. HERO */}
@@ -45,7 +50,7 @@ function Work() {
       {/* 2. CASE STUDIES */}
       <section className={styles.section}>
         <div className={styles.projGrid}>
-          {projects.map((p) => (
+          {visibleProjects.map((p) => (
             <article className={styles.projCard} key={p.title}>
               <div className={styles.projHero} style={{ background: p.accent }}>
                 <span className={styles.projType}>{p.type}</span>
@@ -89,8 +94,8 @@ function Work() {
                 </div>
                 {p.link && (
                   <div className={styles.projLink}>
-                    <a href={p.link} target="_blank" rel="noreferrer">
-                      View Live Project ↗
+                    <a href={p.link} target="_blank" rel="noreferrer" className={styles.projCta}>
+                      Live Demo ↗
                     </a>
                   </div>
                 )}
@@ -98,6 +103,13 @@ function Work() {
             </article>
           ))}
         </div>
+        {hasMore && (
+          <div className={styles.loadMoreWrap}>
+            <button type="button" className="btn-secondary" onClick={() => setShowAll(true)}>
+              Load More Work
+            </button>
+          </div>
+        )}
       </section>
 
       {/* 3. FINAL CTA */}

@@ -5,7 +5,7 @@ import styles from "./Home.module.css";
 import { PopupModal } from "react-calendly";
 import { team } from "@/data/team";
 import { storyParagraphs, visionMission, values } from "@/data/story";
-import { projects } from "@/data/projects";
+import { projects, FEATURED_COUNT } from "@/data/projects";
 
 const services = [
   {
@@ -311,7 +311,7 @@ function Home() {
         </p>
 
         <div className={styles.projGrid}>
-          {projects.slice(0, 2).map((p) => (
+          {projects.slice(0, FEATURED_COUNT).map((p) => (
             <article className={styles.projCard} key={p.title}>
               <div className={styles.projHero} style={{ background: p.accent }}>
                 <span className={styles.projType}>{p.type}</span>
@@ -353,6 +353,13 @@ function Home() {
                   <span className={styles.projLabel}>Impact</span>
                   <p>{p.outcome}</p>
                 </div>
+                {p.link && (
+                  <div className={styles.projLink}>
+                    <a href={p.link} target="_blank" rel="noreferrer" className={styles.projCta}>
+                      Live Demo ↗
+                    </a>
+                  </div>
+                )}
               </div>
             </article>
           ))}
