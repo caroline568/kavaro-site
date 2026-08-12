@@ -1,11 +1,11 @@
 import smartImg from "@/assets/S Mart.png";
 import smargoImg from "@/assets/smargo-homepage.webp";
-import mediflowImg from "@/assets/projects/mediflow.png";
-import kavaroAiSupportImg from "@/assets/projects/kavaro-ai-support.png";
-import bookflowImg from "@/assets/projects/bookflow.png";
-import kavaroCommerceImg from "@/assets/projects/kavaro-commerce.png";
-import closeflowImg from "@/assets/projects/closeflow.png";
-import learnhubImg from "@/assets/projects/learnhub.png";
+import mediflowImg from "@/assets/mediflow.png";
+import kavaroAiSupportImg from "@/assets/kavaro-ai-support.png";
+import bookflowImg from "@/assets/bookflow.png";
+import kavaroCommerceImg from "@/assets/kavaro-commerce.png";
+import closeflowImg from "@/assets/closeflow.png";
+import learnhubImg from "@/assets/learnhub.png";
 
 export type Project = {
   title: string;
