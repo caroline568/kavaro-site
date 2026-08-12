@@ -96,7 +96,7 @@ function About() {
         </div>
       </section>
 
-      {/* 4. VISION + MISSION */}
+      {/* 4. VISION + MISSION + VALUES */}
       <section className={styles.section}>
         <div className="section-label">What Drives Us Forward</div>
         <h2 className={styles.secH}>Where We're Going, What We Do</h2>
@@ -110,12 +110,7 @@ function About() {
             <p>{visionMission.mission}</p>
           </div>
         </div>
-      </section>
-
-      {/* 4b. VALUES */}
-      <section className={styles.section}>
-        <div className="section-label">What We Stand On</div>
-        <h2 className={styles.secH}>Our Values</h2>
+        <h3 style={{ marginTop: 40, marginBottom: 16 }}>Our Values</h3>
         <div className={styles.journeyGrid}>
           {values.map((v) => (
             <div className={styles.journeyStep} key={v.title}>

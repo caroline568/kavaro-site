@@ -60,23 +60,27 @@ export const visionMission = {
 // sections say the same thing.
 export const values = [
   {
-    title: "Engineering Quality",
-    desc: "Code you can hand off, extend, and trust — built fast, secure, and scalable using modern engineering practices.",
+    title: "We Tell You the Truth",
+    desc: "If something won't work for your business, we say so — even before you've paid us anything. We'd rather lose a sale than lose your trust.",
   },
   {
-    title: "Human-Centered Design",
-    desc: "Interfaces people actually understand and enjoy using — designed from real research, not just how something looks in a mockup.",
+    title: "We Follow Through",
+    desc: "Deadlines, updates, and promises kept. Showing up on time and finishing what we start matters more to us than sounding impressive.",
   },
   {
-    title: "Practical AI",
-    desc: "Less repetitive work and better decisions — AI added only where it creates measurable value, never for its own sake.",
+    title: "We Design for Real People",
+    desc: "We watch how people actually use things, then build around that — not around what looks good in a slide deck.",
   },
   {
-    title: "A Security Mindset",
-    desc: "Security built in from day one, not bolted on later — informed by real cybersecurity practice across authentication and data handling.",
+    title: "We Sweat the Small Stuff",
+    desc: "The buttons that work first try, the pages that load fast, the details your customers never notice because we got them right.",
   },
   {
-    title: "Business Understanding",
-    desc: "Solutions that solve the right problem, not just a technical one — because we take the time to understand how your business actually works.",
+    title: "We Use AI Where It Actually Helps",
+    desc: "Not because it's trendy — only where it saves your team real time or gets your customers answers faster.",
+  },
+  {
+    title: "We Protect What's Yours",
+    desc: "Your customers' details, your data, your business — we handle it the way we'd want ours handled.",
   },
 ];

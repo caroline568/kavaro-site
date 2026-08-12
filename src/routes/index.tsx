@@ -375,15 +375,25 @@ function Home() {
         </div>
       </section>
 
-      {/* 4. WHY KAVARO */}
+      {/* 4. WHY KAVARO — vision, mission, and values together */}
       <section className={styles.whySec}>
         <div className="section-label">Why Kavaro</div>
         <h2 className={styles.secH}>Why Businesses Trust Kavaro</h2>
         <p className={styles.secSub}>
-          We combine thoughtful design, disciplined engineering, and close collaboration — because
-          products built intentionally are the ones that last.
+          What we believe, and what we're working toward — the vision behind Kavaro, and the way we
+          actually work day to day.
         </p>
         <div className={styles.whyGrid}>
+          <div className={styles.vmCard}>
+            <h3>Our Vision</h3>
+            <p>{visionMission.vision}</p>
+          </div>
+          <div className={styles.vmCard}>
+            <h3>Our Mission</h3>
+            <p>{visionMission.mission}</p>
+          </div>
+        </div>
+        <div className={styles.whyGrid} style={{ marginTop: 24 }}>
           {values.map((w) => (
             <div className={styles.whyCard} key={w.title}>
               <h3>{w.title}</h3>
@@ -470,23 +480,7 @@ function Home() {
         </div>
       </section>
 
-      {/* 7. VISION + MISSION */}
-      <section className={styles.section}>
-        <div className="section-label">What Drives Us Forward</div>
-        <h2 className={styles.secH}>Where We're Going, What We Do</h2>
-        <div className={styles.whyGrid}>
-          <div className={styles.vmCard}>
-            <h3>Our Vision</h3>
-            <p>{visionMission.vision}</p>
-          </div>
-          <div className={styles.vmCard}>
-            <h3>Our Mission</h3>
-            <p>{visionMission.mission}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. PROCESS */}
+      {/* 7. PROCESS */}
       <section className={styles.section}>
         <div className="section-label">How We Work</div>
         <h2 className={styles.secH}>From First Call to Launch Day</h2>
