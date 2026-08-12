@@ -81,9 +81,10 @@ function Work() {
                 <div className={styles.projBlock}>
                   <span className={styles.projLabel}>Technology</span>
                   <div className={styles.projTools}>
-                    {p.tools.map((t) => (
-                      <span key={t} className={styles.projTool}>
-                        {t}
+                    {p.tools.map((t, i) => (
+                      <span key={t}>
+                        <span className={styles.projTool}>{t}</span>
+                        {i < p.tools.length - 1 ? "\u00A0" : ""}
                       </span>
                     ))}
                   </div>
