@@ -357,6 +357,16 @@
 .vmCard { background: var(--grey-bg); border-left: 2px solid var(--gold); padding: 24px 28px; margin-top: 20px; }
 .vmCard h3 { font-family: var(--font-serif); font-size: 17px; color: var(--navy); margin-bottom: 8px; }
 .vmCard p { font-size: 14px; color: var(--grey-dark); line-height: 1.75; font-weight: 300; }
+.valuesList { list-style: none; margin: 0; padding: 0; }
+.valuesList li {
+  font-size: 14px;
+  color: var(--grey-dark);
+  font-weight: 300;
+  padding: 9px 0;
+  border-bottom: 1px solid var(--grey-pale);
+}
+.valuesList li:last-child { border-bottom: none; }
+.vmTrio { grid-template-columns: repeat(3, 1fr); }
 
 /* ==========================================================
    PROCESS (numbered timeline)
@@ -501,6 +511,7 @@
 
   .whySec { padding: 64px 24px; }
   .whyGrid { grid-template-columns: repeat(2, 1fr); }
+  .vmTrio { grid-template-columns: 1fr; }
 
   .teamGrid { grid-template-columns: 1fr; }
 

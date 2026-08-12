@@ -383,7 +383,7 @@ function Home() {
           What we believe, and what we're working toward — the vision behind Kavaro, and the way we
           actually work day to day.
         </p>
-        <div className={styles.whyGrid}>
+        <div className={`${styles.whyGrid} ${styles.vmTrio}`}>
           <div className={styles.vmCard}>
             <h3>Our Vision</h3>
             <p>{visionMission.vision}</p>
@@ -392,14 +392,14 @@ function Home() {
             <h3>Our Mission</h3>
             <p>{visionMission.mission}</p>
           </div>
-        </div>
-        <div className={styles.whyGrid} style={{ marginTop: 24 }}>
-          {values.map((w) => (
-            <div className={styles.whyCard} key={w.title}>
-              <h3>{w.title}</h3>
-              <p>{w.desc}</p>
-            </div>
-          ))}
+          <div className={styles.vmCard}>
+            <h3>Our Values</h3>
+            <ul className={styles.valuesList}>
+              {values.map((v) => (
+                <li key={v.title}>{v.title}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
